@@ -1,3 +1,9 @@
+* {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 html {
   background: #ddd;
   height: 100%;
@@ -62,9 +68,9 @@ $colorAzulHover: #03A9F4;
 }
 
 $duracion: 0.4s;
-$stroke: #34eb9f;
+$stroke: #1b787d;
 $colorText: #222222;
-$colorTextChecked: #85e6e4;
+$colorTextChecked: #1b787ddd;
 
 .todo {
   display: block;
@@ -79,7 +85,7 @@ $colorTextChecked: #85e6e4;
 .todo.new-item {
   opacity: 0;
   transform: translateX(100px);
-  animation: fadeIn .3s linear forwards;
+  animation: fadeIn .4s linear forwards;
 }
 
 @keyframes fadeIn {
@@ -118,8 +124,15 @@ $colorTextChecked: #85e6e4;
   stroke-linecap: round;
 }
 
-.todo_line, .todo_box, .todo_check {
+.todo_line, .todo_box {
   transition: stroke-dashoffset $duracion cubic-bezier(0.075, 0.82, 0.165, 1)
+}
+
+.todo_check {
+  z-index: 1;
+  stroke: #1dc2bf;
+  stroke-dasharray: 9.8995, 9.8995; stroke-dashoffset: 9.8995;
+  transition-duration: 0.8 * 0.4; 
 }
 
 .todo_circle {
@@ -128,7 +141,7 @@ $colorTextChecked: #85e6e4;
   stroke-width: 0;
 
   transform-origin: 13.5px 12.5px;
-  transform: scale(0.4) rotate(0deg);
+  transform: scale(0.5) rotate(0deg);
   animation: none $duracion linear;
 
   @keyframes explode {
@@ -150,11 +163,11 @@ $colorTextChecked: #85e6e4;
 .todo_box {
   stroke-dasharray: 56, 56;
   stroke-dashoffset: 0;
-  transition-delay: $duracion * 0.2;
+  transition-delay: $duracion * 0.3;
 }
 
 .todo_check {
-  stroke: $stroke;
+  stroke: white;
   stroke-dasharray: 9.8 9.8;
   stroke-dashoffset: 9;
   transition-delay: $duracion * 0.4;
@@ -171,9 +184,9 @@ $colorTextChecked: #85e6e4;
 }
 
 .todo_state:checked {
-  ~ .todo_text { transition-delay: 0s; color: $colorTextChecked; opacity: 0.6;}
+  ~ .todo_text { transition-delay: 0s; color: $colorTextChecked; opacity: 0.8;}
   ~ .todo_icon .todo_box { stroke-dashoffset: 56; transition-delay: 0s; }
   ~ .todo_icon .todo_line { stroke-dashoffset: -8; }
-  ~  .todo_icon .todo_check { stroke-dashoffset: 0; transition-delay: $duracion * 0.6; }
+  ~  .todo_icon .todo_check {stroke: $stroke; stroke-dashoffset: 0; transition-delay: $duracion * 0.6; }
   ~ .todo_icon .todo_circle { animation-name: explode;}
 }
