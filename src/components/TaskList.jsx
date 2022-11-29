@@ -20,7 +20,7 @@ const TaskLis = props => {
     ));
     return (
         <div className="todo-list">
-            {list.length ? checkbox: "Everything looks great here"}
+            {list.length ? checkbox: "Everything looks great around here"}
             {list.length ?(
                 <p>
                     <button className="button pink" onClick={onClickRemoveItem} >Done</button>

@@ -3,6 +3,9 @@
   margin: 0;
   padding: 0;
 }
+.boxC {
+  border-radius: 20px;
+}
 
 html {
   background: #ddd;
@@ -24,6 +27,7 @@ body {
   font-size: 18px;
   max-width: 300px;
   margin: auto;
+  border-radius: 20px;
   margin-bottom: 24px;
   padding: 8px 16px;
   box-shadow: 0 5px 30px rgba(0,0,0,0.2);
