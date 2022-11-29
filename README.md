@@ -1,8 +1,8 @@
 <h1>To-Do App<h1>
-![ss1](https://user-images.githubusercontent.com/114034743/204621369-2331b92e-0fd7-44d1-ae1d-890bc95e3686.png)
 
+![ss1](https://user-images.githubusercontent.com/114034743/204621509-265df503-7454-4cc0-a138-6065438cbef1.png)
 
-## Getting Started with Create React App
+Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
