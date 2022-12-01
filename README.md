@@ -1,4 +1,4 @@
-<h1>To-Do App<h1>
+<h1 alain="center">To-Do App<h1>
 
 ![ss1](https://user-images.githubusercontent.com/114034743/204621509-265df503-7454-4cc0-a138-6065438cbef1.png)
 
